@@ -1,0 +1,12 @@
+x = [1, 2, 3, 4, 5, 6, 7]
+y = [1, 1.2599, 1.4422, 1.5874, 1.71, 1.8171, 1.9129]
+xi = 3.5
+n = len(x)
+p = 0
+for i in range(n):
+    L = 1
+    for j in range(n):
+        if i != j:
+            L *= (xi - x[j]) / (x[i] - x[j])
+    p += L * y[i]
+print(p)
